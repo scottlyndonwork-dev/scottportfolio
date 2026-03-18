@@ -80,7 +80,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-white dark:bg-black-100 p-8 rounded-2xl shadow-md dark:shadow-card'
+        className='flex-[0.75] bg-gray-50 dark:bg-black-100 p-8 rounded-2xl shadow-md dark:shadow-card'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -98,7 +98,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's Your Name  / Company Name?"
-              className='bg-gray-100 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 placeholder:text-gray-400 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border border-gray-200 dark:border-none font-medium focus:ring-2 focus:ring-purple-500'
             />
           </label>
           <label className='flex flex-col'>
@@ -109,7 +109,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's email address?"
-              className='bg-gray-100 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 placeholder:text-gray-400 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border border-gray-200 dark:border-none font-medium focus:ring-2 focus:ring-purple-500'
             />
           </label>
           <label className='flex flex-col'>
@@ -120,13 +120,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-gray-100 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 placeholder:text-gray-400 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border border-gray-200 dark:border-none font-medium focus:ring-2 focus:ring-purple-500'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-gray-800 dark:bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md hover:bg-gray-900 dark:shadow-primary dark:hover:bg-black-200'
+            className='bg-gray-800 dark:bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md hover:bg-gray-900 dark:shadow-primary dark:hover:bg-black-200 transition-colors'
           >
             {loading ? "Sending..." : "Send"}
           </button>

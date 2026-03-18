@@ -19,12 +19,13 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: isDark ? "#1d1836" : "#f8f9fa",
+        background: isDark ? "#1d1836" : "#f3f4f6",
         color: isDark ? "#fff" : "#000",
-        boxShadow: isDark ? "0px 35px 120px -15px #211e35" : "0px 35px 120px -15px rgba(0,0,0,0.1)",
+        boxShadow: isDark ? "0px 35px 120px -15px #211e35" : "0px 0px 20px rgba(0,0,0,0.1)",
       }}
-      contentArrowStyle={{ borderRight: `7px solid ${isDark ? "#232631" : "#e0e0e0"}` }}
+      contentArrowStyle={{ borderRight: `7px solid ${isDark ? "#232631" : "#d1d5db"}` }}
       date={experience.date}
+      dateClassName={isDark ? "" : "text-black"}
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>

@@ -56,8 +56,8 @@ const App = () => {
   }, []);
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <div className='relative z-0 bg-white dark:bg-primary text-black dark:text-white'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center dark:bg-hero-pattern'>
           <Navbar />
           <Hero />
         </div>
@@ -66,7 +66,7 @@ const App = () => {
         <Tech />
         <Works />
         <Feedbacks />
-        <div className='relative z-0'>
+        <div className='relative z-0 bg-white dark:bg-black'>
           <Contact />
           {isDesktop && <StarsCanvas />}
         </div>
