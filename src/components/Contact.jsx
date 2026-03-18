@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -14,8 +14,18 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
   const [loading, setLoading] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -127,7 +137,15 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <EarthCanvas />
+        {isDesktop ? (
+          <EarthCanvas />
+        ) : (
+          <div className='w-full h-full flex items-center justify-center bg-black-200 rounded-2xl'>
+            <div className='text-center'>
+              <p className='text-gray-300 text-sm'>3D Earth visible on desktop</p>
+            </div>
+          </div>
+        )}
       </motion.div>
     </div>
   );
