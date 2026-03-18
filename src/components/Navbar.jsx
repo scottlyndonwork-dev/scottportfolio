@@ -67,41 +67,19 @@ const Navbar = () => {
 
         <button
           onClick={toggleTheme}
-          className='hidden sm:flex ml-10 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1.5 w-80 h-14 transition-all duration-300 items-center shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
+          className='hidden sm:flex ml-10 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1 w-64 h-11 transition-all duration-300 items-center shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
           title={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
           {/* Animated background pill with gradient */}
-          <div className={`absolute top-2 bottom-2 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-xl' : 'from-gray-400 to-gray-500 shadow-2xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-4px)]' : 'left-2'}`} />
+          <div className={`absolute top-1.5 bottom-1.5 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-xl' : 'from-gray-400 to-gray-500 shadow-2xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-3px)]' : 'left-1.5'}`} />
           
           {/* Content */}
-          <div className='relative flex w-full items-center justify-between px-8'>
+          <div className='relative flex w-full items-center justify-between px-6'>
             {/* Light mode section */}
-            <div className={`flex items-center gap-3 transition-all duration-300`}>
-              <div className={`p-2 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
-                <svg className={`w-7 h-7 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-500' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
-                  <circle cx='12' cy='12' r='5' />
-                  <rect x='11' y='1' width='2' height='3' />
-                  <rect x='11' y='20' width='2' height='3' />
-                  <rect x='1' y='11' width='3' height='2' />
-                  <rect x='20' y='11' width='3' height='2' />
-                  <rect x='3.86' y='3.86' width='2.12' height='2.12' transform='rotate(45 4.92 4.92)' />
-                  <rect x='17.02' y='17.02' width='2.12' height='2.12' transform='rotate(45 18.08 18.08)' />
-                  <rect x='3.86' y='17.02' width='2.12' height='2.12' transform='rotate(-45 4.92 18.08)' />
-                  <rect x='17.02' y='3.86' width='2.12' height='2.12' transform='rotate(-45 18.08 4.92)' />
-                </svg>
-              </div>
-              <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
-            </div>
+            <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
             
             {/* Dark mode section */}
-            <div className={`flex items-center gap-3 transition-all duration-300`}>
-              <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
-              <div className={`p-2 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
-                <svg className={`w-7 h-7 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-300' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
-                  <path d='M21.23 15.07c-1.76-4.8-6.78-8.07-12.23-8.07-2.35 0-4.58.67-6.46 1.84 1.87 1.24 3.46 3.09 4.4 5.23.94 2.14.94 4.52 0 6.66-.94 2.14-2.53 3.99-4.4 5.23 1.88 1.17 4.11 1.84 6.46 1.84 5.45 0 10.47-3.27 12.23-8.07.46-1.25.7-2.57.7-3.95s-.24-2.7-.7-3.95Z' />
-                </svg>
-              </div>
-            </div>
+            <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
           </div>
         </button>
 
@@ -115,41 +93,19 @@ const Navbar = () => {
 
           <button
             onClick={toggleTheme}
-            className='ml-4 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1 w-64 h-11 transition-all duration-300 items-center flex shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
+            className='ml-4 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1 w-48 h-9 transition-all duration-300 items-center flex shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
             title={isDark ? "Switch to light mode" : "Switch to dark mode"}
           >
             {/* Animated background pill with gradient */}
-            <div className={`absolute top-1.5 bottom-1.5 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-lg' : 'from-gray-400 to-gray-500 shadow-xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-3px)]' : 'left-1.5'}`} />
+            <div className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-lg' : 'from-gray-400 to-gray-500 shadow-xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-2px)]' : 'left-1'}`} />
             
             {/* Content */}
-            <div className='relative flex w-full items-center justify-between px-6'>
+            <div className='relative flex w-full items-center justify-between px-4'>
               {/* Light mode section */}
-              <div className={`flex items-center gap-2 transition-all duration-300`}>
-                <div className={`p-1.5 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
-                  <svg className={`w-5 h-5 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-500' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
-                    <circle cx='12' cy='12' r='5' />
-                    <rect x='11' y='1' width='2' height='3' />
-                    <rect x='11' y='20' width='2' height='3' />
-                    <rect x='1' y='11' width='3' height='2' />
-                    <rect x='20' y='11' width='3' height='2' />
-                    <rect x='3.86' y='3.86' width='2.12' height='2.12' transform='rotate(45 4.92 4.92)' />
-                    <rect x='17.02' y='17.02' width='2.12' height='2.12' transform='rotate(45 18.08 18.08)' />
-                    <rect x='3.86' y='17.02' width='2.12' height='2.12' transform='rotate(-45 4.92 18.08)' />
-                    <rect x='17.02' y='3.86' width='2.12' height='2.12' transform='rotate(-45 18.08 4.92)' />
-                  </svg>
-                </div>
-                <span className={`font-bold text-xs transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
-              </div>
+              <span className={`font-bold text-xs tracking-wider transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
               
               {/* Dark mode section */}
-              <div className={`flex items-center gap-2 transition-all duration-300`}>
-                <span className={`font-bold text-xs transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
-                <div className={`p-1.5 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
-                  <svg className={`w-5 h-5 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-300' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
-                    <path d='M21.23 15.07c-1.76-4.8-6.78-8.07-12.23-8.07-2.35 0-4.58.67-6.46 1.84 1.87 1.24 3.46 3.09 4.4 5.23.94 2.14.94 4.52 0 6.66-.94 2.14-2.53 3.99-4.4 5.23 1.88 1.17 4.11 1.84 6.46 1.84 5.45 0 10.47-3.27 12.23-8.07.46-1.25.7-2.57.7-3.95s-.24-2.7-.7-3.95Z' />
-                  </svg>
-                </div>
-              </div>
+              <span className={`font-bold text-xs tracking-wider transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
             </div>
           </button>
 
