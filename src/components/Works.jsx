@@ -41,8 +41,8 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-black dark:text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-gray-700 dark:text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-gray-900 dark:text-white font-bold text-[24px]'>{name}</h3>
+          <p className='mt-2 text-gray-800 dark:text-secondary text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
