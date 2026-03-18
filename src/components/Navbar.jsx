@@ -67,28 +67,32 @@ const Navbar = () => {
 
         <button
           onClick={toggleTheme}
-          className='hidden sm:flex ml-10 relative bg-gray-400 dark:bg-gray-700 rounded-full p-1 w-72 h-12 transition-colors items-center'
+          className='hidden sm:flex ml-10 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1.5 w-80 h-14 transition-all duration-300 items-center shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
           title={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
-          {/* Animated background pill */}
-          <div className={`absolute top-1.5 bottom-1.5 w-1/2 rounded-full bg-white dark:bg-gray-600 shadow-lg transition-all duration-300 ${isDark ? 'left-1/2' : 'left-1.5'}`} />
+          {/* Animated background pill with gradient */}
+          <div className={`absolute top-2 bottom-2 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-xl' : 'from-gray-400 to-gray-500 shadow-2xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-4px)]' : 'left-2'}`} />
           
           {/* Content */}
-          <div className='relative flex w-full items-center justify-between px-6'>
+          <div className='relative flex w-full items-center justify-between px-8'>
             {/* Light mode section */}
             <div className={`flex items-center gap-3 transition-all duration-300`}>
-              <svg className={`w-6 h-6 flex-shrink-0 transition-colors ${!isDark ? 'text-gray-700' : 'text-gray-500'}`} fill='currentColor' viewBox='0 0 20 20'>
-                <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
-              </svg>
-              <span className={`font-bold whitespace-nowrap transition-colors ${!isDark ? 'text-gray-700' : 'text-gray-500'}`}>LIGHT MODE</span>
+              <div className={`p-2 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
+                <svg className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-600' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
+                  <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
+                </svg>
+              </div>
+              <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
             </div>
             
             {/* Dark mode section */}
             <div className={`flex items-center gap-3 transition-all duration-300`}>
-              <span className={`font-bold whitespace-nowrap transition-colors ${isDark ? 'text-gray-200' : 'text-gray-500'}`}>DARK MODE</span>
-              <svg className={`w-6 h-6 flex-shrink-0 transition-colors ${isDark ? 'text-gray-200' : 'text-gray-500'}`} fill='currentColor' viewBox='0 0 20 20'>
-                <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
-              </svg>
+              <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
+              <div className={`p-2 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
+                <svg className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-400' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
+                  <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -103,28 +107,32 @@ const Navbar = () => {
 
           <button
             onClick={toggleTheme}
-            className='ml-4 relative bg-gray-400 dark:bg-gray-700 rounded-full p-1 w-56 h-10 transition-colors items-center flex'
+            className='ml-4 relative bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-800 rounded-full p-1 w-64 h-11 transition-all duration-300 items-center flex shadow-lg dark:shadow-2xl hover:shadow-xl dark:hover:shadow-lg/50'
             title={isDark ? "Switch to light mode" : "Switch to dark mode"}
           >
-            {/* Animated background pill */}
-            <div className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-white dark:bg-gray-600 shadow-lg transition-all duration-300 ${isDark ? 'left-1/2' : 'left-1'}`} />
+            {/* Animated background pill with gradient */}
+            <div className={`absolute top-1.5 bottom-1.5 w-1/2 rounded-full bg-gradient-to-br ${!isDark ? 'from-white to-gray-100 shadow-lg' : 'from-gray-400 to-gray-500 shadow-xl'} transition-all duration-300 ${isDark ? 'left-[calc(50%-3px)]' : 'left-1.5'}`} />
             
             {/* Content */}
-            <div className='relative flex w-full items-center justify-between px-4'>
+            <div className='relative flex w-full items-center justify-between px-6'>
               {/* Light mode section */}
               <div className={`flex items-center gap-2 transition-all duration-300`}>
-                <svg className={`w-5 h-5 flex-shrink-0 transition-colors ${!isDark ? 'text-gray-700' : 'text-gray-500'}`} fill='currentColor' viewBox='0 0 20 20'>
-                  <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
-                </svg>
-                <span className={`font-bold text-xs whitespace-nowrap transition-colors ${!isDark ? 'text-gray-700' : 'text-gray-500'}`}>LIGHT</span>
+                <div className={`p-1.5 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
+                  <svg className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-600' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
+                    <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
+                  </svg>
+                </div>
+                <span className={`font-bold text-xs transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
               </div>
               
               {/* Dark mode section */}
               <div className={`flex items-center gap-2 transition-all duration-300`}>
-                <span className={`font-bold text-xs whitespace-nowrap transition-colors ${isDark ? 'text-gray-200' : 'text-gray-500'}`}>DARK</span>
-                <svg className={`w-5 h-5 flex-shrink-0 transition-colors ${isDark ? 'text-gray-200' : 'text-gray-500'}`} fill='currentColor' viewBox='0 0 20 20'>
-                  <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
-                </svg>
+                <span className={`font-bold text-xs transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
+                <div className={`p-1.5 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
+                  <svg className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-400' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
+                    <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
+                  </svg>
+                </div>
               </div>
             </div>
           </button>
