@@ -13,6 +13,28 @@
   color-scheme: dark;
 }
 
+/* Light mode overrides */
+:root:not(.dark) {
+  color-scheme: light;
+  --color-primary: #f8f9fa;
+  --color-secondary: #555;
+  --color-tertiary: #ffffff;
+  --color-text: #000;
+}
+
+:root.dark {
+  --color-primary: #050816;
+  --color-secondary: #aaa6c3;
+  --color-tertiary: #151030;
+  --color-text: #fff;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

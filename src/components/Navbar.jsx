@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,13 +65,29 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <button
+          onClick={toggleTheme}
+          className='hidden sm:flex ml-10 px-4 py-2 rounded-lg bg-tertiary hover:bg-black-200 transition-colors'
+          title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {isDark ? "🌙" : "☀️"}
+        </button>
+
+        <div className='sm:hidden flex flex-1 justify-end items-center gap-4'>
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
+
+          <button
+            onClick={toggleTheme}
+            className='ml-4 px-3 py-1 rounded-lg bg-tertiary hover:bg-black-200 transition-colors text-xl'
+            title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {isDark ? "🌙" : "☀️"}
+          </button>
 
           <div
             className={`${
