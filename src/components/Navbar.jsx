@@ -78,8 +78,16 @@ const Navbar = () => {
             {/* Light mode section */}
             <div className={`flex items-center gap-3 transition-all duration-300`}>
               <div className={`p-2 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
-                <svg className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-600' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
-                  <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
+                <svg className={`w-7 h-7 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-500' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
+                  <circle cx='12' cy='12' r='5' />
+                  <rect x='11' y='1' width='2' height='3' />
+                  <rect x='11' y='20' width='2' height='3' />
+                  <rect x='1' y='11' width='3' height='2' />
+                  <rect x='20' y='11' width='3' height='2' />
+                  <rect x='3.86' y='3.86' width='2.12' height='2.12' transform='rotate(45 4.92 4.92)' />
+                  <rect x='17.02' y='17.02' width='2.12' height='2.12' transform='rotate(45 18.08 18.08)' />
+                  <rect x='3.86' y='17.02' width='2.12' height='2.12' transform='rotate(-45 4.92 18.08)' />
+                  <rect x='17.02' y='3.86' width='2.12' height='2.12' transform='rotate(-45 18.08 4.92)' />
                 </svg>
               </div>
               <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
@@ -89,8 +97,8 @@ const Navbar = () => {
             <div className={`flex items-center gap-3 transition-all duration-300`}>
               <span className={`font-bold text-sm tracking-wider transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
               <div className={`p-2 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
-                <svg className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-400' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
-                  <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
+                <svg className={`w-7 h-7 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-300' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
+                  <path d='M21.23 15.07c-1.76-4.8-6.78-8.07-12.23-8.07-2.35 0-4.58.67-6.46 1.84 1.87 1.24 3.46 3.09 4.4 5.23.94 2.14.94 4.52 0 6.66-.94 2.14-2.53 3.99-4.4 5.23 1.88 1.17 4.11 1.84 6.46 1.84 5.45 0 10.47-3.27 12.23-8.07.46-1.25.7-2.57.7-3.95s-.24-2.7-.7-3.95Z' />
                 </svg>
               </div>
             </div>
@@ -118,8 +126,16 @@ const Navbar = () => {
               {/* Light mode section */}
               <div className={`flex items-center gap-2 transition-all duration-300`}>
                 <div className={`p-1.5 rounded-full transition-all duration-300 ${!isDark ? 'bg-yellow-100 scale-110' : 'bg-transparent scale-100'}`}>
-                  <svg className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-600' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
-                    <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1h0zm4.323 2.677a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414h0zM16 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm2.323-7.677a1 1 0 00-1.414 0l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 000-1.414zM16 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657 9.193a1 1 0 001.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.464 13.536a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707z' clipRule='evenodd' />
+                  <svg className={`w-5 h-5 flex-shrink-0 transition-colors duration-300 ${!isDark ? 'text-yellow-500' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
+                    <circle cx='12' cy='12' r='5' />
+                    <rect x='11' y='1' width='2' height='3' />
+                    <rect x='11' y='20' width='2' height='3' />
+                    <rect x='1' y='11' width='3' height='2' />
+                    <rect x='20' y='11' width='3' height='2' />
+                    <rect x='3.86' y='3.86' width='2.12' height='2.12' transform='rotate(45 4.92 4.92)' />
+                    <rect x='17.02' y='17.02' width='2.12' height='2.12' transform='rotate(45 18.08 18.08)' />
+                    <rect x='3.86' y='17.02' width='2.12' height='2.12' transform='rotate(-45 4.92 18.08)' />
+                    <rect x='17.02' y='3.86' width='2.12' height='2.12' transform='rotate(-45 18.08 4.92)' />
                   </svg>
                 </div>
                 <span className={`font-bold text-xs transition-colors duration-300 ${!isDark ? 'text-gray-800' : 'text-gray-400'}`}>LIGHT</span>
@@ -129,8 +145,8 @@ const Navbar = () => {
               <div className={`flex items-center gap-2 transition-all duration-300`}>
                 <span className={`font-bold text-xs transition-colors duration-300 ${isDark ? 'text-gray-100' : 'text-gray-500'}`}>DARK</span>
                 <div className={`p-1.5 rounded-full transition-all duration-300 ${isDark ? 'bg-blue-900 scale-110' : 'bg-transparent scale-100'}`}>
-                  <svg className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-400' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 20 20'>
-                    <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
+                  <svg className={`w-5 h-5 flex-shrink-0 transition-colors duration-300 ${isDark ? 'text-blue-300' : 'text-gray-400'}`} fill='currentColor' viewBox='0 0 24 24'>
+                    <path d='M21.23 15.07c-1.76-4.8-6.78-8.07-12.23-8.07-2.35 0-4.58.67-6.46 1.84 1.87 1.24 3.46 3.09 4.4 5.23.94 2.14.94 4.52 0 6.66-.94 2.14-2.53 3.99-4.4 5.23 1.88 1.17 4.11 1.84 6.46 1.84 5.45 0 10.47-3.27 12.23-8.07.46-1.25.7-2.57.7-3.95s-.24-2.7-.7-3.95Z' />
                   </svg>
                 </div>
               </div>
