@@ -11,15 +11,19 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useTheme } from "../context/ThemeContext";
 
 const ExperienceCard = ({ experience }) => {
+  const { isDark } = useTheme();
+
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: isDark ? "#1d1836" : "#f8f9fa",
+        color: isDark ? "#fff" : "#000",
+        boxShadow: isDark ? "0px 35px 120px -15px #211e35" : "0px 35px 120px -15px rgba(0,0,0,0.1)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: `7px solid ${isDark ? "#232631" : "#e0e0e0"}` }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -33,9 +37,9 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className='text-black dark:text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-gray-600 dark:text-secondary text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
