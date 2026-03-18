@@ -51,6 +51,18 @@ const TypingText = ({
 };
 
 const Hero = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <section className={`relative w-full h-auto md:h-screen mx-auto min-h-[500px]`}>
       <div
@@ -72,9 +84,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='hidden md:block'>
-        <ComputersCanvas />
-      </div>
+      {isDesktop && <ComputersCanvas />}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
