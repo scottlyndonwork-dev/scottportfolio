@@ -43,11 +43,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-gray-700 dark:text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Cum Laude BSIT graduate with 5+ years of remote freelance experience as a Virtual Assistant and Graphic Designer. Skilled in managing administrative workflows, calendars, and client communications, alongside producing 1,000+ brand designs across social media, web, and print. Adds a technical edge most VAs don't have — hands-on experience supporting a regional government finance system and IT operations across multiple business locations, making me equally comfortable managing your inbox, your brand, or your basic tech needs. Reliable, self-managed, and experienced working directly with clients with minimal oversight.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
