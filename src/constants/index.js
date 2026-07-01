@@ -43,19 +43,27 @@ export const navLinks = [
 const services = [
   {
     title: "Web Developer",
+    description:
+      "Building responsive websites and simple web solutions with HTML, CSS, JavaScript, WordPress, PHP, and MySQL.",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Virtual Assistance & Admin",
+    description:
+      "Calendar and inbox management, scheduling, research and reporting, documentation, stakeholder follow-up, Notion, Asana, ChatGPT, and Zapier automation.",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Design & Creative",
+    description:
+      "Canva professional design, branding and layout, social media graphics, logo design, banners, promotional materials, and UI/visual design sense.",
+    icon: creator,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Technical Support",
+    description:
+      "HTML, CSS, JavaScript, WordPress, PHP, MySQL, Python, system support, troubleshooting, and technical documentation.",
+    icon: backend,
   },
 ];
 
